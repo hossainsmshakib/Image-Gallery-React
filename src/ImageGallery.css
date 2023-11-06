@@ -1,0 +1,222 @@
+/* ImageGallery.css */
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 16px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  
+  .gallery-title {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin: 0;
+    padding: 20px 0; /* Adjust the vertical padding to add space between the text and the button */
+  }
+  
+  .delete-button {
+    margin-left: 100px; /* Adjust the left margin to add space to the right of the text */
+  }
+  
+  
+  .gallery-title h1 {
+    margin: 0;
+  }
+  
+  .image {
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer; /* Add a pointer cursor to indicate draggability */
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+  }
+  
+  /* Hover effect for all images */
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Style the featured image */
+  .image:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .image:nth-child(1) img {
+    transition: transform 0.2s;
+  }
+  
+  /* Hover effect for the featured image */
+  .image:nth-child(1):hover img {
+    transform: scale(1.1);
+  }
+  
+  .image .image-checkbox {
+    display: none; /* Hide checkboxes by default */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .image.selected .image-checkbox {
+    display: block; /* Show checkboxes when an image is selected */
+  }
+
+  .image.selected img {
+    filter: brightness(80%) saturate(80%);
+    cursor: pointer;
+  }
+  
+  
+  .selected-image-count {
+    display: block;
+    position: absolute;
+    left: 275px; /* Adjust the left position as needed */
+    top: 20px; /* Adjust the top position as needed */
+  }
+  
+
+/* ImageGallery.css */
+
+.gallery-card {
+    background-color: #e1cece; /* Off-white background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for the card */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 8px; /* Add rounded corners for a card effect */
+    margin: 0 auto; /* Center the card horizontally */
+    max-width: 1000px; /* Set a maximum width for the card */
+  }
+  
+
+/* Common styles for both desktop and mobile */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 16px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  
+  .gallery-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .delete-button {
+    margin-left: 100px;
+  }
+  
+  .gallery-title h1 {
+    margin: 0;
+  }
+  
+  .image {
+    position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+  }
+  
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  
+  .image:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .image:nth-child(1) img {
+    transition: transform 0.2s;
+  }
+  
+  .image:nth-child(1):hover img {
+    transform: scale(1.1);
+  }
+  
+  .image .image-checkbox {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .image.selected .image-checkbox {
+    display: block;
+  }
+  
+  .image.selected img {
+    filter: brightness(80%) saturate(80%);
+    cursor: pointer;
+  }
+  
+  .selected-image-count {
+    display: block;
+    position: absolute;
+    left: 275px;
+    top: 20px;
+  }
+  
+  /* Media queries for tablet and mobile responsiveness */
+  @media (max-width: 768px) {
+    .image-gallery {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  
+    .gallery-title {
+      padding: 20px;
+    }
+  
+    .delete-button {
+      margin-left: 0;
+    }
+  
+    .selected-image-count {
+      left: 0;
+    }
+  }
+  
+  /* Add this to ImageGallery.css */
+.add-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e1cece;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.add-photo:hover {
+  transform: scale(1.1);
+}
+
+.add-photo-text {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
